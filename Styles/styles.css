@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Alkatra', cursive;
+    background-color: beige;
+    padding: 90px 20px 0px;
+}
+
+.Header{
+    background-color: rgb(216, 178, 132);
+    height: 80px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+
+.Nav{
+    display: flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0px auto;
+}
+
+.NavLink{
+    color: beige;
+    text-decoration: none;
+}
+
+.Logo{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+}
+
+.NavMenu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+
+.NavMenu-item{
+    font-size: 20px;
+    margin: 0 20px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.NavMenu-link:hover{
+    background-color: rgb(196, 165, 129);
+    transition: 0.10s;
+}
+
+.NavMenu-link{
+    padding: 8px 12px;
+    border-radius: 3px;
+}
+
+.NavToggle{
+    color: beige;
+    background: none;
+    border: none;
+    padding: 0 20px; 
+    font-size: 30px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px ){
+    body{
+        padding-top: 70px;
+    }
+    
+    .Header{
+        height: 60px;
+    }
+    
+    .Logo{
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+    
+    .NavMenu{
+        flex-direction: column;
+        margin-right: 20px;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0;
+        left: 100%;
+        top: 60px;
+        position: fixed;
+        background-color: rgb(155, 130, 99);
+        overflow-y: auto;
+        height: calc(100% - 60px);
+        transition: 0.3s;
+    }
+    
+    .NavMenu-item{
+        line-height: 70px;
+    }
+
+    .NavMenu-link:hover,
+    .NavMenu-link-active{
+        color: rgb(229, 198, 162);
+        background: none;
+        transition: 0.5s;
+    }
+    
+    .NavToggle{
+        display: block;
+    }
+
+    .NavMenu-visible{
+
+    }
+}
